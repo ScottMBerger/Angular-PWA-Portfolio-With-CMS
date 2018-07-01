@@ -1,0 +1,39 @@
+:host {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// .outer {
+//   margin-top: 45vh;
+//   width: 100vw;
+//   height: 200vh;
+//   background-color: white;
+// }
+.info-card {
+  //   top: 15vh;
+  //   position: absolute;
+  padding-top: 120px;
+  margin: auto;
+  margin-top: 100px;
+  width: 50vw;
+  max-width: 600px;
+  min-width: 350px;
+  height: 50vh;
+  background-color: lightcyan;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle-pic {
+  background-color: lightblue;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  margin: auto;
+}
+
+.wrap {}

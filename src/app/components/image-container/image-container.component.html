@@ -1,0 +1,9 @@
+<section *ngIf="imgurData$ | async as imgurData; else loading">
+
+  <app-image-box *ngFor='let img of imgurData' [data]="img"></app-image-box>
+</section>
+
+<ng-template #loading>
+  <i class="fas fa-circle-notch fa-spin">
+  </i>
+</ng-template>

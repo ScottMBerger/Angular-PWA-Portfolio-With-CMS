@@ -30,3 +30,9 @@ $addColors: ( "twitter":($twitter, $twitter-invert), "linkedin": ($linkedin, $li
 $colors: map-merge($colors, $addColors);
 // 6. Import the rest of Bulma
 @import "./node_modules/bulma/bulma";
+body {
+  //   background: url(/assets/bg1.jpg);
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   min-height: 100vh;
+}
