@@ -21,7 +21,7 @@
   max-width: 600px;
   min-width: 350px;
   height: 50vh;
-  background-color: lightcyan;
+  background-color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -34,6 +34,13 @@
   width: 200px;
   position: absolute;
   margin: auto;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
 }
 
 .wrap {}
+
+h3 {
+  font-weight: 500 !important;
+}

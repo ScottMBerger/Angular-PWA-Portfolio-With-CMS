@@ -1,3 +1,3 @@
-<i [style]="sanitizer('padding-bottom:'+(data.height/data.width*100)+'%')">
+<i [style]="sanitizer('padding-bottom:'+(data.height/data.width*100)+'%')" [@scrollAnimation]="state">
 </i>
-<img [src]="data.link" [alt]="data.title" [title]="data.title">
+<img [src]="data.link" [alt]="data.title" [title]="data.title" [@scrollAnimation]="state">

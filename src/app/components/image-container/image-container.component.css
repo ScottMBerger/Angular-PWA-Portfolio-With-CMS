@@ -6,5 +6,5 @@ section {
 section::after {
   content: '';
   flex-grow: 1e4;
-  min-width: 20%;
+  min-width: 60%;
 }

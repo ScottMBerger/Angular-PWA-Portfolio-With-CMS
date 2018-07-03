@@ -32,6 +32,6 @@ export class RequestService {
       .get<any>(this.base + endPoint, {
         headers: { Authorization: "Client-ID " + this.clientId }
       })
-      .pipe(map(res => res.data.images));
+      .pipe(map(res => res.data));
   }
 }
