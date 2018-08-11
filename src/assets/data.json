@@ -6,8 +6,11 @@
   "email": "CONTACT@TESSAMBERGER.COM",
   "info1": "Engineering Student at Ohio University",
   "info2": "Currently pursuing opportunities",
-  "googleDescription": "Engineering Student at Ohio University. Currently pursuing opportunities.",
-  "imgurClientId": "791c109feadbbd9",
+  "imgurAlbumId": "791c109feadbbd9",
   "themeColor": "#2cba92",
-  "backGroundImage": ""
+  "backgroundUrl": "",
+  "resumeUrl": "",
+
+  "googleDescription": "Engineering Student at Ohio University. Currently pursuing opportunities.",
+  "keywords": "Rockets, Engineering, Ohio, Columbus, Tessa Berger"
 }

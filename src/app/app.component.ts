@@ -24,10 +24,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.cms.getLocalFile().subscribe(res => {
       this.titleService.setTitle(res.title);
-      this.metaService.addTag({
-        property: "description",
-        content: res.googleDescription
-      });
+      this.metaService.addTags([
+        { name: "theme-color", content: res.themeColor },
+        { name: "description", content: res.googleDescription },
+        { name: "keywords", content: res.keywords }
+      ]);
       this.elementRef.nativeElement.style.setProperty(
         "--theme-color",
         res.themeColor

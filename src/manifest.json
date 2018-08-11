@@ -1,13 +1,12 @@
 {
-  "name": "folio",
-  "short_name": "folio",
-  "theme_color": "#1976d2",
+  "name": "Portfolio",
+  "short_name": "Portfolio",
+  "theme_color": "#2cba92",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "icons": [
-    {
+  "icons": [{
       "src": "assets/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"

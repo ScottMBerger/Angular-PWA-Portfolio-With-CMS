@@ -23,6 +23,8 @@
     "@angular/router": "^6.1.2",
     "@angular/service-worker": "^6.1.2",
     "@fortawesome/fontawesome": "^1.1.8",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^6.0.1",
     "bulma": "^0.7.1",
     "core-js": "^2.5.4",
     "rxjs": "^6.2.2",
