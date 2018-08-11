@@ -36,3 +36,11 @@ body {
   //   background-size: 100%;
   //   min-height: 100vh;
 }
+
+:root {
+  --theme-color: #2cba92;
+}
+
+.is-primary {
+  background-color: var(--theme-color) !important;
+}

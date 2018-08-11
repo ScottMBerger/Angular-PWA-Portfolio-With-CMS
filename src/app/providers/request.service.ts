@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Http, Headers, RequestOptions } from "@angular/http";
 import { map } from "rxjs/operators";
 
 interface Image {
@@ -11,6 +10,7 @@ interface Image {
   height: number;
   width: number;
 }
+
 @Injectable({
   providedIn: "root"
 })
