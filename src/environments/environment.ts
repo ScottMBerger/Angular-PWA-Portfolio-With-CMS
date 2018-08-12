@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dropboxToken:
+    "m75wGVEQJKAAAAAAAAAAEncU3fVus-rlssheDAO_38zWioIfbHMQmLSclCyn43Ut"
 };
 
 /*

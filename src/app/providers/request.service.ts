@@ -22,7 +22,13 @@ export class RequestService {
   headers() {
     const headers = new HttpHeaders();
     headers.append("Authorization", "Client-ID " + this.clientId);
-    return { headers: headers };
+
+    // const options = new RequestOptions({ headers: headers });
+    // return { headers: headers };
+
+    return {
+      headers: { Authorization: "Client-ID " + this.clientId }
+    };
   }
 
   get(id: string): Observable<Image[]> {

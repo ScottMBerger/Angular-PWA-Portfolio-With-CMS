@@ -1,6 +1,8 @@
+import { environment } from "./../../environments/environment.prod";
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { HttpClient } from "@angular/common/http";
+import { map } from "../../../node_modules/rxjs/operators";
 
 interface ContentData {
   title?: string;
@@ -28,14 +30,40 @@ export class CmsService {
 
   id = "i9f1iwc96kh09vk";
   dataFile = "data.json";
+
+  token = environment.dropboxToken;
   constructor(private http: HttpClient) {
-    this.getLocalFile().subscribe(data => {
-      this.content.next(data);
-    });
+    this.getFromDropBox().subscribe(
+      data => {
+        this.content.next(data);
+      },
+      err => {
+        console.log("error", err);
+      }
+    );
   }
 
   getContent() {
     return this.content$;
+  }
+
+  getFromDropBox() {
+    return this.http
+      .post<any>(
+        "https://content.dropboxapi.com/2/files/download",
+        null,
+        this.headers()
+      )
+      .pipe();
+  }
+
+  headers() {
+    return {
+      headers: {
+        Authorization: "Bearer " + this.token,
+        "Dropbox-API-Arg": `{"path":"/Apps/PortfolioAngular/${this.dataFile}"}`
+      }
+    };
   }
 
   getLocalFile(fileName: string = this.dataFile) {
@@ -48,7 +76,7 @@ export class CmsService {
       .pipe();
   }
 
-  getFile(fileName: string): Observable<any> {
+  getFile(fileName: string = this.dataFile): Observable<any> {
     const base = `https://www.dropbox.com/s`;
     const params = `?dl=0&reject_cors_preflight=true`;
     const url = `${base}/${this.id}/${fileName}${params}`;
