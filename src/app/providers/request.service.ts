@@ -22,16 +22,13 @@ export class RequestService {
   headers() {
     const headers = new HttpHeaders();
     headers.append("Authorization", "Client-ID " + this.clientId);
-
-    // const options = new RequestOptions({ headers: headers });
     return { headers: headers };
   }
+
   get(id: string): Observable<Image[]> {
     const endPoint = "/album/" + id + "/images";
     return this.http
-      .get<any>(this.base + endPoint, {
-        headers: { Authorization: "Client-ID " + this.clientId }
-      })
+      .get<any>(this.base + endPoint, this.headers())
       .pipe(map(res => res.data));
   }
 }

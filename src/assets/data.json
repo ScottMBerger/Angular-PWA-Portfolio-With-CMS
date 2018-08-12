@@ -1,16 +1,16 @@
 {
   "title": "Tessa Berger",
+  "themeColor": "#2cba92",
   "name": "Tessa Berger",
   "location": "DUBLIN, OH 43016",
   "phone": "(614) 222-4444",
   "email": "CONTACT@TESSAMBERGER.COM",
   "info1": "Engineering Student at Ohio University",
   "info2": "Currently pursuing opportunities",
-  "imgurAlbumId": "791c109feadbbd9",
-  "themeColor": "#2cba92",
-  "backgroundUrl": "",
-  "resumeUrl": "",
-
+  "imgurAlbumId": "FHraQJW",
+  "profileImageUrl": "/assets/character.jpg",
+  "backgroundUrl": "/assets/bg1.jpg",
+  "resumeUrl": "https://google.com",
   "googleDescription": "Engineering Student at Ohio University. Currently pursuing opportunities.",
   "keywords": "Rockets, Engineering, Ohio, Columbus, Tessa Berger"
 }

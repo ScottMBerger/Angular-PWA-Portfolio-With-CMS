@@ -1,5 +1,6 @@
+import { Observable } from "rxjs";
 import { RequestService } from "./../../providers/request.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
@@ -9,7 +10,9 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class ImageContainerComponent implements OnInit {
   imageList = [{ file: "one" }, { file: "two" }, { file: "three" }];
-  imgurData$ = this.request.get("FHraQJW");
+  @Input("id")
+  id;
+  imgurData$: Observable<any>;
   constructor(
     private request: RequestService,
     private sanitize: DomSanitizer
@@ -23,8 +26,12 @@ export class ImageContainerComponent implements OnInit {
     console.log(res);
     return res;
   }
+
   sanitizer(str) {
     return this.sanitize.bypassSecurityTrustStyle(str);
   }
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.imgurData$ = this.request.get(this.id);
+  }
 }

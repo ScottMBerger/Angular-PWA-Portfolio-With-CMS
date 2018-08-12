@@ -1,19 +1,41 @@
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import { HttpClient } from "@angular/common/http";
+
+interface ContentData {
+  title?: string;
+  name?: string;
+  location?: string;
+  phone?: string;
+  email?: string;
+  info1?: string;
+  info2?: string;
+  imgurAlbumId?: string;
+  themeColor?: string;
+  backgroundUrl?: string;
+  resumeUrl?: string;
+  profileImageUrl?: string;
+  googleDescription?: string;
+  keywords?: string;
+}
 
 @Injectable({
   providedIn: "root"
 })
 export class CmsService {
+  private content = new Subject<ContentData>();
+  content$ = this.content.asObservable();
+
   id = "i9f1iwc96kh09vk";
   dataFile = "data.json";
-  content: Object;
-
   constructor(private http: HttpClient) {
-    // this.getFile(this.dataFile).subscribe(res => {
-    //   console.log("data", res);
-    // });
+    this.getLocalFile().subscribe(data => {
+      this.content.next(data);
+    });
+  }
+
+  getContent() {
+    return this.content$;
   }
 
   getLocalFile(fileName: string = this.dataFile) {

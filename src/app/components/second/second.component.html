@@ -1,12 +1,12 @@
 <!-- <div class="wrap"> -->
 
-<img src="/assets/character.jpg" class="circle-pic">
+<img [src]="content.profileImageUrl" class="circle-pic">
 
 <div class="info-card has-text-centered">
-  <h3 class="is-size-1">Tessa Berger</h3>
-  <h4 class="is-size-6">Engineering Student at Ohio University</h4>
+  <h3 class="is-size-1">{{content.name}}</h3>
+  <h4 class="is-size-6">{{content.info1}}</h4>
   <br>
-  <p>Currently pursuing internship opportunities</p>
+  <p>{{content.info2}}</p>
 </div>
 <!-- <div class="outer">
   </div> -->
