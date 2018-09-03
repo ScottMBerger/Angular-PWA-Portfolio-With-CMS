@@ -1,3 +1,4 @@
+import { DocContainerComponent } from "./components/doc-container/doc-container.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -20,6 +21,7 @@ import { RequestService } from "./providers/request.service";
     SecondComponent,
     ImageSectionComponent,
     ImageContainerComponent,
+    DocContainerComponent,
     ImageBoxComponent
   ],
   imports: [

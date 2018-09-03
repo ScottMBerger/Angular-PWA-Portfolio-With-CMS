@@ -1,0 +1,10 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section::after {
+  content: '';
+  flex-grow: 1e4;
+  min-width: 60%;
+}

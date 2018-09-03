@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   dropboxToken:
-    "m75wGVEQJKAAAAAAAAAAEncU3fVus-rlssheDAO_38zWioIfbHMQmLSclCyn43Ut"
+    // "vgqF8eeWJTIAAAAAAAAAqPt7SMZmsplqnr5vtfNQFm5ZyX97-Q3sM_6ACQMl8Lk_"
+    "m75wGVEQJKAAAAAAAAAAHqjdDPz6FUr61YyRVNw1HcUNS9eqSzLW4pi_VMsGDtIB"
 };
 
 /*

@@ -1,8 +1,8 @@
-import { environment } from "./../../environments/environment.prod";
+import { environment } from "../../environments/environment";
 import { Injectable } from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { map } from "../../../node_modules/rxjs/operators";
+import { map } from "rxjs/operators";
 
 interface ContentData {
   title?: string;
@@ -49,11 +49,7 @@ export class CmsService {
 
   getFromDropBox() {
     return this.http
-      .post<any>(
-        "https://content.dropboxapi.com/2/files/download",
-        null,
-        this.headers()
-      )
+      .post<any>("/dropbox/files/download", null, this.headers())
       .pipe();
   }
 
@@ -61,7 +57,7 @@ export class CmsService {
     return {
       headers: {
         Authorization: "Bearer " + this.token,
-        "Dropbox-API-Arg": `{"path":"/Apps/PortfolioAngular/${this.dataFile}"}`
+        "Dropbox-API-Arg": `{"path":"/${this.dataFile}"}`
       }
     };
   }

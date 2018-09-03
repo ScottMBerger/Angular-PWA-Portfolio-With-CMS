@@ -11,6 +11,7 @@ import {
   DomSanitizer,
   SafeStyle
 } from "@angular/platform-browser";
+import { AppStateService } from "./providers/app-state.service";
 
 @Component({
   selector: "app-root",
@@ -27,7 +28,8 @@ export class AppComponent implements OnInit {
     private titleService: Title,
     private metaService: Meta,
     private elementRef: ElementRef,
-    private santizer: DomSanitizer
+    private santizer: DomSanitizer,
+    private appState: AppStateService
   ) {}
 
   ngOnInit() {
@@ -35,6 +37,7 @@ export class AppComponent implements OnInit {
   }
 
   initMetaAndStyles(res) {
+    this.appState.set("cms", res);
     this.titleService.setTitle(res.title);
     this.metaService.addTags([
       { name: "theme-color", content: res.themeColor },

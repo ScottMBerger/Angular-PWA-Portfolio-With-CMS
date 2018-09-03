@@ -1,4 +1,4 @@
-import { CmsService } from "./../../providers/cms.service";
+import { CmsService } from "../../providers/cms.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({

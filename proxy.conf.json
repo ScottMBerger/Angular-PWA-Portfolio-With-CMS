@@ -1,0 +1,11 @@
+{
+  "/dropbox/*": {
+    "pathRewrite": {
+      "^/dropbox": "https://content.dropboxapi.com/2"
+    },
+    "target": "https://content.dropboxapi.com/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
