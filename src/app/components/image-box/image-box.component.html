@@ -8,13 +8,15 @@
 </div>
 <div class="info-hover" [@scrollAnimation]="state" [hidden]="!hover" (mouseleave)="hover=false">
   <div class="inside-info">
-    <button class="button is-primary" (click)="showFull = true">Info</button>
+    <button class="button is-primary" (click)="showFull = true">More Info</button>
   </div>
 </div>
 <div class="full-page-info" *ngIf="showFull" (click)="close($event)">
   <div class="modal-inner" #modalInner>
 
-    <div class="exit" (click)="showFull = false;"><i class="fas fa-times"></i></div>
+    <div class="exit" (click)="showFull = false;">
+      <i class="fas fa-times"></i>
+    </div>
     <div class="content">
       <h1>
         {{data.title}}</h1>

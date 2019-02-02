@@ -52,6 +52,7 @@ export class ImageBoxComponent implements OnInit {
   modalInner;
   showFull = false;
   state = "hide";
+  hover = false;
 
   constructor(private sanitize: DomSanitizer, public el: ElementRef) {}
 
