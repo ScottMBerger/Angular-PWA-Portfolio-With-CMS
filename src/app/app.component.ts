@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     private elementRef: ElementRef,
     private santizer: DomSanitizer,
     private appState: AppStateService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
@@ -51,5 +51,6 @@ export class AppComponent implements OnInit {
     this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
       `url( ${res.backgroundUrl} )`
     );
+    window['prerenderReady'] = true;
   }
 }

@@ -1,3 +1,4 @@
+import { ImageSkeletonComponent } from './components/image-skeleton/image-skeleton.component';
 import { DocContainerComponent } from "./components/doc-container/doc-container.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -19,10 +20,11 @@ import { RequestService } from "./providers/request.service";
     AppComponent,
     HeaderComponent,
     SecondComponent,
+    DocContainerComponent,
     ImageSectionComponent,
     ImageContainerComponent,
-    DocContainerComponent,
-    ImageBoxComponent
+    ImageBoxComponent,
+    ImageSkeletonComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -35,4 +37,4 @@ import { RequestService } from "./providers/request.service";
   providers: [RequestService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

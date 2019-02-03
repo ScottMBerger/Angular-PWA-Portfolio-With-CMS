@@ -14,7 +14,7 @@
           <span class="icon">
             <i class="fas fa-phone"></i>
           </span>
-          <p class="heading is-size-7">{{content.phone}}</p>
+          <p class="heading is-size-7"><a [href]="'tel:'+content.phone">{{content.phone}}</a></p>
         </div>
       </div>
       <div class="level-item has-text-centered">
@@ -22,7 +22,7 @@
           <span class="icon">
             <i class="fas fa-comment-alt"></i>
           </span>
-          <p class="heading is-size-7">{{content.email}}</p>
+          <p class="heading is-size-7"><a [href]="'mailto:'+content.email">{{content.email}}</a></p>
         </div>
       </div>
     </nav>

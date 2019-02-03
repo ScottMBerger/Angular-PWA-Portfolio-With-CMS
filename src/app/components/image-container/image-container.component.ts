@@ -10,13 +10,12 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class ImageContainerComponent implements OnInit {
   imageList = [{ file: "one" }, { file: "two" }, { file: "three" }];
-  @Input("id")
-  id;
+  @Input() id;
   imgurData$: Observable<any>;
   constructor(
     private request: RequestService,
     private sanitize: DomSanitizer
-  ) {}
+  ) { }
 
   style(img) {
     const res = {

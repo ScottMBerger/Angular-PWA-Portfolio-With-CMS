@@ -6,9 +6,8 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./image-section.component.css"]
 })
 export class ImageSectionComponent implements OnInit {
-  @Input("id")
-  id;
-  constructor() {}
+  @Input() id;
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
