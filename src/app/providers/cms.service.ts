@@ -42,6 +42,6 @@ export class CmsService {
   }
 
   getManifest() {
-    return this.http.get<any>('https://scottb.app/manifest/files/download')
+    return this.http.get<any>('/manifest/files/download')
   }
 }
