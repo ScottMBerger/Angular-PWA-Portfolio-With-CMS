@@ -1,9 +1,9 @@
 {
-  "/dropbox/*": {
+  "/manifest/*": {
     "pathRewrite": {
-      "^/dropbox": "https://content.dropboxapi.com/2"
+      "^/manifest": "https://scottb.app/manifest"
     },
-    "target": "https://content.dropboxapi.com/",
+    "target": "https://scottb.app/",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
