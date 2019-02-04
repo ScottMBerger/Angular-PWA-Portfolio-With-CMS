@@ -34,6 +34,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
+
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+      // Stash the event so it can be triggered later.
+      deferredPrompt = e;
+      deferredPrompt.prompt();
+    });
   }
 
   initMetaAndStyles(res) {
