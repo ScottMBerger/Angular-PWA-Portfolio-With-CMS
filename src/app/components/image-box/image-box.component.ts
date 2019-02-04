@@ -42,17 +42,15 @@ import {
   ]
 })
 export class ImageBoxComponent implements OnInit {
-  @HostBinding("style.width")
-  width: any;
-  @HostBinding("style.flexGrow")
-  grow: any;
-  @Input("data")
-  data;
+  @HostBinding("style.width") width: any;
+  @HostBinding("style.flexGrow") grow: any;
+  @Input() data;
   @ViewChild("modalInner")
   modalInner;
   showFull = false;
   state = "hide";
   hover = false;
+  scrolled = false;
 
   constructor(private sanitize: DomSanitizer, public el: ElementRef) { }
 
@@ -75,6 +73,7 @@ export class ImageBoxComponent implements OnInit {
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {
+    this.scrolled = true;
     const componentPosition = this.el.nativeElement.getBoundingClientRect();
     const scrollPosition = window.scrollY + window.innerHeight;
 

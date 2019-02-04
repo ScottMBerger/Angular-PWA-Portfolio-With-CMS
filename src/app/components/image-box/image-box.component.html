@@ -1,6 +1,6 @@
 <i [style]="sanitizer('padding-bottom:'+(data.height/data.width*100)+'%')" [@scrollAnimation]="state">
 </i>
-<img [src]="data.link" [alt]="data.title" [title]="data.title" [@scrollAnimation]="state" (mouseenter)="hover=true">
+<img *ngIf="scrolled" [src]="data.link" [alt]="data.title" [title]="data.title" [@scrollAnimation]="state" (mouseenter)="hover=true">
 <div class="info-title" [@scrollAnimation]="state">
   <p>
     {{data.title}}
