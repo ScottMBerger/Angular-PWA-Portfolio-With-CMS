@@ -71,9 +71,10 @@
     .nav {
       width: 100%;
       min-height: 70px;
-      max-width: 960px;
+      max-width: 1152px;
       margin: auto;
       border-radius: 8px;
+      position: relative;
     }
 
     .sectCard {
@@ -90,6 +91,15 @@
       top: 295px;
       left: 50%;
       transform: translate3d(-50%, 0, 0);
+    }
+
+    .resume-button {
+      position: absolute;
+      width: 158px;
+      height: 35px;
+      right: 0;
+      border-radius: 4px;
+      bottom: -59px;
     }
 
     .shine {
@@ -128,6 +138,18 @@
         height: 168px;
       }
     }
+
+    @media (max-width: 1280px) {
+      .nav {
+        max-width: 960px !important;
+      }
+    }
+
+    @media (min-width: 1471px) {
+      .nav {
+        max-width: 1344px !important;
+      }
+    }
   </style>
 </head>
 
@@ -135,7 +157,9 @@
   <section class="skeleton-loader">
     <div class="sect1">
       <div class="sect2">
-        <nav class="nav shine"></nav>
+        <nav class="nav shine">
+          <div class="resume-button shine"></div>
+        </nav>
         <div class="sectCard">
           <div class="circle shine"></div>
         </div>
