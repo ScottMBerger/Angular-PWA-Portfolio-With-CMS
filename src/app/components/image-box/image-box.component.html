@@ -26,7 +26,7 @@
         <h2>Additional Files</h2>
         <ul>
           <li class="list-documents" *ngFor="let file of data.files">
-            <a class="button is-primary" [href]="file.url">
+            <a rel="noreferrer" class="button is-primary" [href]="file.url">
               <i class=" fa fa-download" aria-hidden="true"></i>
             </a>
             {{file.name}}</li>

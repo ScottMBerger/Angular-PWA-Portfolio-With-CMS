@@ -26,7 +26,8 @@
         </div>
       </div>
     </nav>
-    <a class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download Resume</a>
+    <a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
+      Resume</a>
     <br>
     <app-second [content]="content"></app-second>
     <app-image-section [id]="content.imgurAlbumId" *ngIf="content.imgurAlbumId"></app-image-section>
