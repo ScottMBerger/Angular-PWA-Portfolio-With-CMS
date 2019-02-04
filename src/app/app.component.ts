@@ -40,13 +40,13 @@ export class AppComponent implements OnInit {
     this.appState.set("cms", res);
     this.titleService.setTitle(res.title);
     this.metaService.addTags([
-      { name: "theme-color", content: res.themeColor },
+      { name: "theme-color", content: res.theme_color },
       { name: "description", content: res.googleDescription },
       { name: "keywords", content: res.keywords }
     ]);
     this.elementRef.nativeElement.style.setProperty(
       "--theme-color",
-      res.themeColor
+      res.theme_color
     );
     this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
       `url( ${res.backgroundUrl} )`

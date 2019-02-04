@@ -53,6 +53,5 @@ export class ImageSkeletonComponent implements OnInit {
 
   onLoad() {
     this.loaded = true;
-    console.log('loaded')
   }
 }

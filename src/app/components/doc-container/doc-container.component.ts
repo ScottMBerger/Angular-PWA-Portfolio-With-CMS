@@ -21,7 +21,6 @@ export class DocContainerComponent implements OnInit {
     private sanitize: DomSanitizer,
     private appState: AppStateService
   ) {
-    console.log("got projects", this.projects);
   }
 
   style(img) {
@@ -29,7 +28,6 @@ export class DocContainerComponent implements OnInit {
       width: this.sanitizer((img.width * 200) / img.height + "px"),
       "flex-grow": this.sanitizer((img.width * 200) / img.height + "px")
     };
-    console.log(res);
     return res;
   }
 

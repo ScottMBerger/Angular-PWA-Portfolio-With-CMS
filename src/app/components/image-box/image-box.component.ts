@@ -54,7 +54,7 @@ export class ImageBoxComponent implements OnInit {
   state = "hide";
   hover = false;
 
-  constructor(private sanitize: DomSanitizer, public el: ElementRef) {}
+  constructor(private sanitize: DomSanitizer, public el: ElementRef) { }
 
   ngOnInit() {
     this.data.width = this.data.width || 55;
@@ -68,8 +68,6 @@ export class ImageBoxComponent implements OnInit {
   }
 
   close(event) {
-    console.log(event);
-    console.log(this.modalInner.nativeElement.contains(event.target));
     if (!this.modalInner.nativeElement.contains(event.target)) {
       this.showFull = false;
     }
