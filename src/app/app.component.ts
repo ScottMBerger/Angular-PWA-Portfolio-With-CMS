@@ -38,10 +38,10 @@ export class AppComponent implements OnInit {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
 
     window.addEventListener('beforeinstallprompt', (e) => {
-      console.log('install prompted', e)
       // // Prevent Chrome 67 and earlier from automatically showing the prompt
       // // Stash the event so it can be triggered later.
       this.deferredPrompt = e;
+      this.showPWADownload = true;
     });
   }
 
