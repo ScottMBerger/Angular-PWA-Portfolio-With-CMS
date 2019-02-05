@@ -48,7 +48,7 @@ export class ImageSkeletonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    console.log('image src', this.src)
   }
 
   onLoad() {

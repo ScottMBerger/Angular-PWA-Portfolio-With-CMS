@@ -57,9 +57,33 @@ export class AppComponent implements OnInit {
       "--theme-color",
       res.theme_color
     );
-    this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
-      `url( ${res.backgroundUrl} )`
-    );
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (!isSafari && res.backgroundImage.webp) {
+      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
+        `url( ${res.backgroundImage.webp} )`
+      );
+    } else if (isSafari && res.backgroundImage.jp2) {
+      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
+        `url( ${res.backgroundImage.jp2} )`
+      );
+    } else {
+      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
+        `url( ${res.backgroundImage.src} )`
+      );
+    }
+
+    const styles = [
+      'border-radius: 100px',
+      'font-size: 24px',
+      'padding: 20px',
+      'padding-left: 40px',
+      'padding-right: 40px',
+      'color: rgba(255, 255, 255, 0.9)',
+      'background: ' + res.theme_color,
+      'box-shadow: 0 2px 4px 0 rgba(115,101,97,.27)'
+    ].join(';');
+    console.log('%c ' + res.title, styles);
     window['prerenderReady'] = true;
   }
 }

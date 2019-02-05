@@ -1,1 +1,7 @@
-<img [src]="src" alt="My Picture" (load)="onLoad()" [hidden]="!loaded">
+<!-- <img [src]="src1" alt="My Picture" (load)="onLoad()" [hidden]="!loaded"> -->
+
+<picture>
+    <source *ngIf="src.webp" [srcset]="src.webp" srcset="img/awesomeWebPImage.webp" type="image/webp">
+    <source *ngIf="src.jp2" [srcset]="src.jp2" type="image/jp2">
+    <img [src]="src.src" alt="My Picture">
+</picture>
