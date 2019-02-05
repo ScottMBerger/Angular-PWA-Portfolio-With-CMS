@@ -1,3 +1,7 @@
 <section class="first-section" [style.background-image]="backgroundUrl">
   <app-header></app-header>
 </section>
+<div class="notification is-success" style="position: fixed; bottom: 0; right: 0; " *ngIf="showPWADownload" (click)="installTapped()">
+  <button class="delete" (click)="showPWADownload = false"></button>
+  Interested in adding the app as a PWA to your home? Tap here.
+</div>

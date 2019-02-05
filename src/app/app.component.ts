@@ -22,6 +22,8 @@ import { AppStateService } from "./providers/app-state.service";
 export class AppComponent implements OnInit {
   content$ = this.cms.content$;
   backgroundUrl: SafeStyle;
+  deferredPrompt;
+  showPWADownload = false;
 
   constructor(
     private cms: CmsService,
@@ -35,13 +37,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
 
-    let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       console.log('install prompted', e)
       // // Prevent Chrome 67 and earlier from automatically showing the prompt
       // // Stash the event so it can be triggered later.
-      deferredPrompt = e;
+      this.deferredPrompt = e;
     });
+  }
+
+  installTapped() {
+    this.deferredPrompt.prompt()
   }
 
   initMetaAndStyles(res) {
