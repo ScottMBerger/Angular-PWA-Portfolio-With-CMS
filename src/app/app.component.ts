@@ -12,6 +12,7 @@ import {
   SafeStyle
 } from "@angular/platform-browser";
 import { AppStateService } from "./providers/app-state.service";
+import { SwUpdate } from "@angular/service-worker";
 
 @Component({
   selector: "app-root",
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
   backgroundUrl: SafeStyle;
   deferredPrompt;
   showPWADownload = false;
+  showUpdate = false;
 
   constructor(
     private cms: CmsService,
@@ -31,22 +33,36 @@ export class AppComponent implements OnInit {
     private metaService: Meta,
     private elementRef: ElementRef,
     private santizer: DomSanitizer,
-    private appState: AppStateService
-  ) { }
+    private appState: AppStateService,
+    private updates: SwUpdate
+  ) {
+    updates.available.subscribe(event => {
+      this.showUpdate = true;
+    });
+  }
 
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
 
     window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault()
       // // Prevent Chrome 67 and earlier from automatically showing the prompt
       // // Stash the event so it can be triggered later.
       this.deferredPrompt = e;
-      this.showPWADownload = true;
+      setTimeout(() => {
+        this.showPWADownload = true;
+      }, 30000)
     });
   }
 
   installTapped() {
+    this.showPWADownload = false;
     this.deferredPrompt.prompt()
+  }
+
+  updateTapped() {
+    this.showUpdate = false;
+    this.updates.activateUpdate().then(() => document.location.reload());
   }
 
   initMetaAndStyles(res) {

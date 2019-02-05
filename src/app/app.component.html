@@ -1,7 +1,11 @@
 <section class="first-section" [style.background-image]="backgroundUrl">
   <app-header></app-header>
 </section>
-<div class="notification is-success" style="position: fixed; bottom: 0; right: 0; " *ngIf="showPWADownload" (click)="installTapped()">
+<div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showPWADownload" (click)="installTapped()">
   <button class="delete" (click)="showPWADownload = false"></button>
   Interested in adding the app as a PWA to your home? Tap here.
+</div>
+<div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showUpdate" (click)="updateTapped()">
+  <button class="delete" (click)="showUpdate = false"></button>
+  A new version is available. Tap here to update.
 </div>
