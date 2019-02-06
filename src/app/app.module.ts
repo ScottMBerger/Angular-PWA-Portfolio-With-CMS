@@ -8,23 +8,25 @@ import { AppComponent } from "./app.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { HeaderComponent } from "./components/header/header.component";
-import { SecondComponent } from "./components/second/second.component";
 import { ImageSectionComponent } from "./components/image-section/image-section.component";
 import { ImageContainerComponent } from "./components/image-container/image-container.component";
 import { ImageBoxComponent } from "./components/image-box/image-box.component";
 import { HttpClientModule } from "@angular/common/http";
 import { RequestService } from "./providers/request.service";
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SecondComponent,
+    ProfileCardComponent,
     DocContainerComponent,
     ImageSectionComponent,
     ImageContainerComponent,
     ImageBoxComponent,
-    ImageSkeletonComponent
+    ImageSkeletonComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserAnimationsModule,

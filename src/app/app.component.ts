@@ -78,6 +78,11 @@ export class AppComponent implements OnInit {
       res.theme_color
     );
 
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = res.icons[1].src;
+    document.head.appendChild(link);
+
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (!isSafari && res.backgroundImage.webp) {
       this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(

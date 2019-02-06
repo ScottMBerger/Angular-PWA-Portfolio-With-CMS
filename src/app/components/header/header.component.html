@@ -1,35 +1,29 @@
-<section class="section" *ngIf="content$ | async as content">
-  <div class="container">
-    <nav class="level is-size-3">
-      <div class="level-item has-text-left">
-        <div class="is-flex">
-          <span class="icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </span>
-          <p class="heading is-size-7">{{content.location}}</p>
-        </div>
-      </div>
-      <div class="level-item has-text-centered">
-        <div class="is-flex">
-          <span class="icon">
-            <i class="fas fa-phone"></i>
-          </span>
-          <p class="heading is-size-7"><a [href]="'tel:'+content.phone">{{content.phone}}</a></p>
-        </div>
-      </div>
-      <div class="level-item has-text-centered">
-        <div class="is-flex">
-          <span class="icon">
-            <i class="fas fa-comment-alt"></i>
-          </span>
-          <p class="heading is-size-7"><a [href]="'mailto:'+content.email">{{content.email}}</a></p>
-        </div>
-      </div>
-    </nav>
-    <a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
-      Resume</a>
-    <br>
-    <app-second [content]="content"></app-second>
-    <app-image-section [id]="content.imgurAlbumId" *ngIf="content.imgurAlbumId"></app-image-section>
+<nav class="level is-size-3">
+  <div class="level-item has-text-left">
+    <div class="is-flex">
+      <span class="icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </span>
+      <p class="heading is-size-7">{{content.location}}</p>
+    </div>
   </div>
-</section>
+  <div class="level-item has-text-centered">
+    <div class="is-flex">
+      <span class="icon">
+        <i class="fas fa-phone"></i>
+      </span>
+      <p class="heading is-size-7"><a [href]="'tel:'+content.phone">{{content.phone}}</a></p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div class="is-flex">
+      <span class="icon">
+        <i class="fas fa-comment-alt"></i>
+      </span>
+      <p class="heading is-size-7"><a [href]="'mailto:'+content.email">{{content.email}}</a></p>
+    </div>
+  </div>
+</nav>
+<a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
+  Resume</a>
+<br>

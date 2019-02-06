@@ -1,0 +1,6 @@
+<div class="wrap-box" *ngFor="let project of content.showcase">
+  <div class="project-box" [ngStyle]="{'background': 'url('+project.image.src+') no-repeat'}">
+    <div class="layer"></div>
+    <p>{{project.title}}</p>
+  </div>
+</div>
