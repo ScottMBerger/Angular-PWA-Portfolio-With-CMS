@@ -12,3 +12,30 @@
   animation: load 0.35s forwards;
 }
 
+
+.section-two {
+  width: 100vw;
+  position: relative;
+  background: var(--theme-color);
+  color: white;
+    padding-bottom: 10%;
+  
+  .inner {
+    height: 16vh;
+    @media (max-width: 768px) {
+      height: 8vh;
+    }
+    width: 100%;
+    position: relative;
+        clip-path: circle(250vw at 50% -245vw);
+    .inner-inner {
+    height: 100%;
+    width: 100%;
+      background: white;
+    }
+  }
+  .accolades {
+    margin: auto;
+    width: 90%;
+  }
+}

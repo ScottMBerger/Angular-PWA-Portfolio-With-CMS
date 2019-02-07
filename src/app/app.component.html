@@ -3,12 +3,23 @@
     <div class="container">
       <app-header [content]="content"></app-header>
       <app-profile-card [content]="content"></app-profile-card>
-      <!-- <app-image-section [id]="content.imgurAlbumId" *ngIf="content.imgurAlbumId"></app-image-section> -->
       <app-projects [content]="content"></app-projects>
+      <!-- <app-image-section [id]="content.imgurAlbumId" *ngIf="content.imgurAlbumId"></app-image-section> -->
+
+
+    </div>
+  </section>
+  <section class="section-two" *ngIf="content$ | async as content">
+    <div class="inner">
+      <div class="inner-inner"></div>
+    </div>
+    <div class="accolades">
+
+      <p>Accolades</p>
+      <app-image-container [id]="content.imgurAlbumId"></app-image-container>
     </div>
   </section>
 </section>
-
 
 <div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showPWADownload" (click)="installTapped()">
   <button class="delete" (click)="showPWADownload = false"></button>
