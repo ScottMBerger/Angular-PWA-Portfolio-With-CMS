@@ -2,11 +2,11 @@
 </i>
 <img *ngIf="scrolled" [src]="data.link" [alt]="data.title" [title]="data.title" [@scrollAnimation]="state" (mouseenter)="hover=true">
 <div class="info-title" [@scrollAnimation]="state">
-  <p>
+  <p *ngIf="data.title">
     {{data.title}}
   </p>
 </div>
-<div class="info-hover" [@scrollAnimation]="state" [hidden]="!hover" (mouseleave)="hover=false">
+<div class="info-hover" [@scrollAnimation]="state" [hidden]="!hover" (mouseleave)="hover=false" *ngIf="data.description || data.files">
   <div class="inside-info">
     <button class="button is-primary" (click)="showFull = true">More Info</button>
   </div>
@@ -18,9 +18,9 @@
       <i class="fas fa-times"></i>
     </div>
     <div class="content">
-      <h1>
+      <h1 *ngIf="data.title">
         {{data.title}}</h1>
-      <p>{{data.description}}</p>
+      <p *ngIf="data.description">{{data.description}}</p>
       <div *ngIf="data.files">
 
         <h2>Additional Files</h2>
