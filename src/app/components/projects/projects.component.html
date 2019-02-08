@@ -1,11 +1,11 @@
 <div class="wrap-box" *ngFor="let project of content.showcase">
-  <div class="project-box" [ngStyle]="{'background': 'url('+project.image.src+') no-repeat'}">
+  <div class="project-box" [appBgLoader]="project.image">
     <div class="layer"></div>
     <div class="content">
 
       <h3 class="project-title">{{project.title}}</h3>
       <div class="icons" *ngIf="project.links">
-        <a class="icon" *ngFor="let link of project.links" [href]="link.url">
+        <a class="icon" *ngFor="let link of project.links" [attr.aria-label]="link.url" [href]="link.url">
           <i [class]="link.icon" aria-hidden="true"></i>
         </a>
       </div>

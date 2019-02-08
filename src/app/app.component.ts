@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   bgLoaded = false;
   showPWADownload = false;
   showUpdate = false;
+  backgroundImage;
 
   constructor(
     private cms: CmsService,
@@ -88,6 +89,7 @@ export class AppComponent implements OnInit {
     link.href = res.icons[1].src;
     document.head.appendChild(link);
 
+    this.backgroundImage = res.backgroundImage
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (!isSafari && res.backgroundImage.webp) {
       this.backgroundSrc = res.backgroundImage.webp;

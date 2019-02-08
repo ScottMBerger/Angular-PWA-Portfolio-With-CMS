@@ -1,5 +1,5 @@
-<section class="background" [style.background-image]="backgroundUrl" [ngClass]="{'bgLoaded': bgLoaded}">
-  <img [src]="backgroundSrc" hidden *ngIf="backgroundSrc" (load)="bgLoaded = true">
+<section class="background" [appBgLoader]="backgroundImage" *ngIf="backgroundImage">
+  <!-- <img [src]="backgroundSrc" hidden *ngIf="backgroundSrc" (load)="bgLoaded = true"> -->
 </section>
 <ng-container *ngIf="content$ | async as content">
 

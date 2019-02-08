@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RequestService } from "./providers/request.service";
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { BgLoaderDirective } from './providers/bg-loader.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
     ImageContainerComponent,
     ImageBoxComponent,
     ImageSkeletonComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BgLoaderDirective
   ],
   imports: [
     BrowserAnimationsModule,
