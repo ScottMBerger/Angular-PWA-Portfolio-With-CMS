@@ -1,25 +1,37 @@
-<section class="main-section" [style.background-image]="backgroundUrl">
-  <section class="section" *ngIf="content$ | async as content">
+<section class="background" [style.background-image]="backgroundUrl" [ngClass]="{'bgLoaded': bgLoaded}">
+  <img [src]="backgroundSrc" hidden *ngIf="backgroundSrc" (load)="bgLoaded = true">
+</section>
+<ng-container *ngIf="content$ | async as content">
+
+  <section class="section">
     <div class="container">
       <app-header [content]="content"></app-header>
       <app-profile-card [content]="content"></app-profile-card>
       <app-projects [content]="content"></app-projects>
       <!-- <app-image-section [id]="content.imgurAlbumId" *ngIf="content.imgurAlbumId"></app-image-section> -->
-
-
     </div>
   </section>
-  <section class="section-two" *ngIf="content$ | async as content">
+  <section class="section-two">
+
     <div class="inner">
       <div class="inner-inner"></div>
     </div>
+    <div class="spacer">
+
+    </div>
+    <div class="inner inner-bottom">
+      <div class="inner-inner"></div>
+    </div>
+  </section>
+  <section class="section-three">
+
     <div class="accolades">
 
       <p>Accolades</p>
       <app-image-container [id]="content.imgurAlbumId"></app-image-container>
     </div>
   </section>
-</section>
+</ng-container>
 
 <div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showPWADownload" (click)="installTapped()">
   <button class="delete" (click)="showPWADownload = false"></button>

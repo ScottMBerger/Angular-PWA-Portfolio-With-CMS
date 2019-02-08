@@ -23,7 +23,9 @@ import { SwUpdate } from "@angular/service-worker";
 export class AppComponent implements OnInit {
   content$ = this.cms.content$;
   backgroundUrl: SafeStyle;
+  backgroundSrc: string;
   deferredPrompt;
+  bgLoaded = false;
   showPWADownload = false;
   showUpdate = false;
 
@@ -41,6 +43,9 @@ export class AppComponent implements OnInit {
     });
   }
 
+  loaded() {
+    console.log('loadeded bg')
+  }
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
 
@@ -85,19 +90,16 @@ export class AppComponent implements OnInit {
 
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (!isSafari && res.backgroundImage.webp) {
-      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
-        `url( ${res.backgroundImage.webp} )`
-      );
-    } else if (isSafari && res.backgroundImage.jp2) {
-      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
-        `url( ${res.backgroundImage.jp2} )`
-      );
-    } else {
-      this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
-        `url( ${res.backgroundImage.src} )`
-      );
-    }
+      this.backgroundSrc = res.backgroundImage.webp;
 
+    } else if (isSafari && res.backgroundImage.jp2) {
+      this.backgroundSrc = res.backgroundImage.jp2
+    } else {
+      this.backgroundSrc = res.backgroundImage.src
+    }
+    this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
+      `url( ${this.backgroundSrc} )`
+    );
     const styles = [
       'border-radius: 100px',
       'font-size: 24px',

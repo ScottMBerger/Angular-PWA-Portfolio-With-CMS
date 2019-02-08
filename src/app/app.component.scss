@@ -1,39 +1,63 @@
-.main-section {
-  width: 100%;
-  height: 75vh;
-  background-repeat: no-repeat;
-  background-size: cover; //   min-height: 100vh;
-  opacity: 0;
-  animation: load 0.35s forwards;
-}
-
 .notification {
   opacity: 0;
   animation: load 0.35s forwards;
 }
-
+.background {
+  position: absolute;
+  width: 100%;
+  height: 75vh;  
+  background-repeat: no-repeat;
+  background-size: cover; //   min-height: 100vh;
+  opacity: 0;
+}
+.bgLoaded {
+  animation: load 0.15s forwards;
+}
 
 .section-two {
-  width: 100vw;
-  position: relative;
+  // position: absolute;
+  height: 20vh;
+  width:  100vw;
   background: var(--theme-color);
-  color: white;
-    padding-bottom: 10%;
-  
+
+  .spacer {
+    width: 100%;
+    height: 5vh;
+
+  }
   .inner {
-    height: 16vh;
-    @media (max-width: 768px) {
-      height: 8vh;
-    }
+    height: 7.5vh;
+    background: var(--theme-color);
+    // @media (max-width: 768px) {
+    //   height: 8vh;
+    // }
     width: 100%;
     position: relative;
-        clip-path: circle(250vw at 50% -245vw);
+    overflow: hidden;
     .inner-inner {
-    height: 100%;
-    width: 100%;
+      height: 100vw;
+      width: 250vw;
+      border-radius: 50%;
+      transform: translate(-50%, 0) translate3d(0, 0, 0);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
       background: white;
     }
   }
+
+  .inner-bottom {
+    transform: rotate(180deg) translate3d(0, 0, 0);
+  }
+}
+.section-three {
+  width:  100vw;
+  position: relative;
+  background: white;
+  color: white;
+    padding-bottom: 10%;
+  
+
   .accolades {
     margin: auto;
     width: 90%;

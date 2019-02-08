@@ -5,6 +5,7 @@ import {
   HostBinding,
   HostListener,
   ElementRef,
+  AfterContentInit,
   ViewChild
 } from "@angular/core";
 import {
@@ -40,17 +41,18 @@ import {
     ])
   ]
 })
-export class ImageSkeletonComponent implements OnInit {
-  // @HostBinding("style.width")
+export class ImageSkeletonComponent implements OnInit, AfterContentInit {
   @Input() src;
   loaded = false;
-
   constructor() { }
 
+  ngAfterContentInit() {
+    this.loaded = true;
+  }
   ngOnInit() {
   }
 
   onLoad() {
-    this.loaded = true;
   }
+
 }
