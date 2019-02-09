@@ -1,27 +1,27 @@
-# Folio
+# Intro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project was designed to create an easy to configure and customize portfolio site for anyone to use. None of the source files need to be changed to configure a unique presentation for the site.
+
+This is the similar idea of using a CMS but all configuration data being stored in the manifest.json file allows you to serve this data from any source you would like as long as the manifest.json is formed in the correct way.
+
+The project is configured to retrieve the manifest.json from their Dropbox folder.
+
+With the project setup this way, two sites can be serving the same project folder and look completely different by changing the nginx to direct to a different manifest.json file. Along with this, the project is already using the manifest.json for the PWA configuration enabling it takes no additional overhead.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Change the proxy.config.json to load the manifest file of your choice.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Production deployment
 
-## Build
+Run `npm run build` ideally you would use pm2 or similar to run the server.js file and to keep a live watch of the project.
+Configure your server to reverse proxy to the port (3000 by default)
+Make sure to configure your server to forward proxy to your manifest file.
+-- [Example nginx config file](https://github.com)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Live sites using this project
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[https://scottb.app](https://scottb.app)
+[https://tessamberger.com](https://tessamberger.com)

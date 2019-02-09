@@ -14,9 +14,21 @@ a:hover, a:active {
   text-decoration: underline;
 }
 .heading {
-  padding-left: 8px;
+  padding-left: 12px;
 }
 
 .level-item {
   padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .link-content {
+    min-width: 175px;
+    margin-left: 6px;
+  }
+  
+  .resume-wrap {
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -46,3 +46,7 @@ body {
 .is-primary {
   background-color: var(--theme-color) !important;
 }
+
+.button.is-primary:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(166, 165, 174, 0.25);
+}

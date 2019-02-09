@@ -1,6 +1,6 @@
 <nav class="level is-size-3">
   <div class="level-item has-text-left">
-    <div class="is-flex">
+    <div class="is-flex link-content">
       <span class="icon">
         <i class="fas fa-map-marker-alt"></i>
       </span>
@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="level-item has-text-centered">
-    <div class="is-flex">
+    <div class="is-flex link-content">
       <span class="icon">
         <i class="fas fa-phone"></i>
       </span>
@@ -16,14 +16,16 @@
     </div>
   </div>
   <div class="level-item has-text-centered">
-    <div class="is-flex">
+    <div class="is-flex link-content">
       <span class="icon">
         <i class="fas fa-comment-alt"></i>
       </span>
-      <p class="heading is-size-7"><a [href]="'mailto:'+content.email">{{content.email}}</a></p>
+      <p class="heading is-size-7 "><a [href]="'mailto:'+content.email">{{content.email}}</a></p>
     </div>
   </div>
 </nav>
-<a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
-  Resume</a>
-<br>
+<div class="resume-wrap">
+  <a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
+    Resume</a>
+  <br>
+</div>
