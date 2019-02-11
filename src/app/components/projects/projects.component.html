@@ -1,13 +1,57 @@
 <div class="wrap-box" *ngFor="let project of content.showcase">
-  <div class="project-box" [appBgLoader]="project.image">
+  <div class="project-box" [appBgLoader]="project.image" shine="true">
     <div class="layer"></div>
     <div class="content">
-
-      <h3 class="project-title">{{project.title}}</h3>
+      <div class="top-content" (click)="open(project)">
+        <h3 class="project-title">{{project.title}}</h3>
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+      </div>
       <div class="icons" *ngIf="project.links">
         <a class="icon" *ngFor="let link of project.links" [attr.aria-label]="link.url" [href]="link.url">
           <i [class]="link.icon" aria-hidden="true"></i>
         </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-page-info" *ngIf="modal" (click)="modal = false">
+  <div class="modal-inner" #modalInner>
+    <div class="exit" (click)="modal = false">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <div class="content">
+      <h1 *ngIf="modal.title">{{modal.title}}</h1>
+      <div class="columns">
+
+        <div class="column is-two-fifths image-column">
+          <ng-container *ngFor="let image of modal.additionalImages; index as i">
+            <div class="img-card" draggable="true" (dragstart)="onDragStart($event)" (drag)="onDrag($event)" (dragend)="onDragEnd($event)"
+              [style.transform]="'rotate(' + (i*6) + 'deg)'" [appBgLoader]="image"><i class="fas fa-search-plus"></i></div>
+          </ng-container>
+
+        </div>
+
+        <div class="column">
+          <p *ngIf="modal.description.constructor.name === 'String'; else list" style="padding: 12px;">{{
+            modal.description }}</p>
+          <ng-template #list>
+            <ul>
+              <li *ngFor="let bullet of modal.description">
+                {{bullet}}
+              </li>
+            </ul>
+          </ng-template>
+          <ul *ngIf="modal.files">
+            <li class="list-documents" *ngFor="let file of modal.files">
+              <a rel="noreferrer" class="button is-primary" [href]="file.url">
+                <i class=" fa fa-download" aria-hidden="true"></i> <span style="padding: 6px;">{{ file.name }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>

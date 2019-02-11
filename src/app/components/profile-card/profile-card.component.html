@@ -1,5 +1,7 @@
-<app-image-skeleton [src]="content.profileImage" class="circle-pic shine">
-</app-image-skeleton>
+<!-- <app-image-skeleton [src]="content.profileImage" class="circle-pic shine">
+</app-image-skeleton> -->
+<div class="circle-pic" [appBgLoader]="content.profileImage" shine="true">
+</div>
 <div class="info-card has-text-centered">
   <h3 class="is-size-1">{{content.name}}</h3>
   <h4 class="is-size-6">{{content.info1}}</h4>

@@ -1,12 +1,12 @@
 :host {
   overflow: hidden;
+  // background: none;
 }
 
 picture {
   opacity: 0;
-  transition: 0.15s;
 }
 
 .loaded {
-  opacity: 1;
+  animation: load 0.125s forwards ease-in;
 }

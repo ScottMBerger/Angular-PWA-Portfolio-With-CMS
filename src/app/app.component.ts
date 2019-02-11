@@ -44,9 +44,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-  loaded() {
-    console.log('loadeded bg')
-  }
   ngOnInit() {
     this.cms.content$.subscribe(res => this.initMetaAndStyles(res));
 

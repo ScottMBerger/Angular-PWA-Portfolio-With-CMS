@@ -21,6 +21,7 @@
   width: 50vw;
   max-width: 600px;
   min-width: 350px;
+  min-height: 340px;
   height: 50vh;
   background-color: white;
   display: flex;
@@ -37,6 +38,9 @@
   border-width: 2px;
   border-color: white;
   border-style: solid;
+  
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 h3 {

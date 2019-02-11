@@ -1,16 +1,21 @@
-import { Directive, Input, ElementRef, OnInit } from '@angular/core';
+import { Directive, Input, ElementRef, OnInit, Output, EventEmitter, Renderer2 } from '@angular/core';
 
 @Directive({
     selector: '[appBgLoader]'
 })
 export class BgLoaderDirective implements OnInit {
     @Input('appBgLoader') image;
+    @Input() shine;
+    @Output() load = new EventEmitter();
     backgroundSrc: string;
 
-    constructor(private el: ElementRef) {
+    constructor(private el: ElementRef, private renderer: Renderer2) {
     }
 
     ngOnInit() {
+        if (this.shine) {
+            this.renderer.addClass(this.el.nativeElement, 'shine');
+        }
         this.loadImage()
     }
 
@@ -28,6 +33,10 @@ export class BgLoaderDirective implements OnInit {
         curImg.src = this.backgroundSrc;
         curImg.onload = () => {
             this.el.nativeElement.style.backgroundImage = `url( ${this.backgroundSrc} )`
+            if (this.shine) {
+                this.renderer.removeClass(this.el.nativeElement, 'shine');
+            }
+            this.load.emit()
         }
     }
 }

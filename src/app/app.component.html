@@ -1,8 +1,7 @@
 <section class="background" [appBgLoader]="backgroundImage" *ngIf="backgroundImage">
-  <!-- <img [src]="backgroundSrc" hidden *ngIf="backgroundSrc" (load)="bgLoaded = true"> -->
 </section>
-<ng-container *ngIf="content$ | async as content">
 
+<ng-container *ngIf="content$ | async as content">
   <section class="section">
     <div class="container">
       <app-header [content]="content"></app-header>
@@ -33,11 +32,12 @@
   </section>
 </ng-container>
 
-<div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showPWADownload" (click)="installTapped()">
+<div class="notification is-success" *ngIf="showPWADownload" (click)="installTapped()">
   <button class="delete" (click)="showPWADownload = false"></button>
-  Interested in adding the app as a PWA to your home? Tap here.
+  Interested in adding the portfolio as a PWA to your home? Tap here.
 </div>
-<div class="notification is-success" style="position: fixed; bottom: 4px; right: 4px; " *ngIf="showUpdate" (click)="updateTapped()">
+
+<div class="notification is-success" *ngIf="showUpdate" (click)="updateTapped()">
   <button class="delete" (click)="showUpdate = false"></button>
-  A new version is available. Tap here to update.
+  A new version of the portfolio is available. Tap here to update.
 </div>

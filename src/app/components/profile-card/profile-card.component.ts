@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./profile-card.component.scss"]
 })
 export class ProfileCardComponent implements OnInit {
+  circleLoaded = false;
   @Input() content;
 
   constructor() { }
