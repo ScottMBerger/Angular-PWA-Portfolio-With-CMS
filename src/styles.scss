@@ -20,7 +20,11 @@ $github-invert: findColorInvert($github);
 $addColors: ( "twitter":($twitter, $twitter-invert), "linkedin": ($linkedin, $linkedin-invert), "github": ($github, $github-invert));
 $colors: map-merge($colors, $addColors);
 @import "./node_modules/bulma/bulma";
+
+$fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
 @import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/brands";
 
 :root {
   --theme-color: #2cba92;
