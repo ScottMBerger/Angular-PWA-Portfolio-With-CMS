@@ -99,6 +99,7 @@ export class AppComponent implements OnInit {
     this.backgroundUrl = this.santizer.bypassSecurityTrustStyle(
       `url( ${this.backgroundSrc} )`
     );
+
     const styles = [
       'border-radius: 100px',
       'font-size: 24px',
@@ -109,8 +110,8 @@ export class AppComponent implements OnInit {
       'background: ' + res.theme_color,
       'box-shadow: 0 2px 4px 0 rgba(115,101,97,.27)'
     ].join(';');
-
     console.log('%c ' + res.title, styles, '⬅ please hire me');
+
     window['prerenderReady'] = true;
   }
 }

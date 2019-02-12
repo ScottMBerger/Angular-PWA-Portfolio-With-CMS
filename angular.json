@@ -26,8 +26,7 @@
               "src/humans.txt"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
