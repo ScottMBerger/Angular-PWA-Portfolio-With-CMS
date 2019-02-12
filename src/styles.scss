@@ -22,6 +22,7 @@ $colors: map-merge($colors, $addColors);
 @import "./node_modules/bulma/bulma";
 
 $fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
+$fa-font-display: swap;
 @import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "./node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "./node_modules/@fortawesome/fontawesome-free/scss/brands";
