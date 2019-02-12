@@ -28,7 +28,7 @@
         <div class="column is-two-fifths image-column">
           <ng-container *ngFor="let image of modal.additionalImages; index as i">
             <div class="img-card" draggable="true" (dragstart)="onDragStart($event)" (drag)="onDrag($event)" (dragend)="onDragEnd($event)"
-              [style.transform]="'rotate(' + (i*6) + 'deg)'" [appBgLoader]="image"><i class="fas fa-search-plus"></i></div>
+              [appBgLoader]="image"><i class="fas fa-search-plus"></i></div>
           </ng-container>
 
         </div>

@@ -30,6 +30,14 @@
       <app-image-container [id]="content.imgurAlbumId"></app-image-container>
     </div>
   </section>
+
+  <section class="section-social">
+    <div class="social">
+      <a class="icon" *ngFor="let social of content.social" [attr.aria-label]="social.url" [href]="social.url">
+        <i [class]="social.icon" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
 </ng-container>
 
 <div class="notification is-success" *ngIf="showPWADownload" (click)="installTapped()">

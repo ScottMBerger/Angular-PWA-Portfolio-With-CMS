@@ -7,7 +7,9 @@ export class BgLoaderDirective implements OnInit {
     @Input('appBgLoader') image;
     @Input() shine;
     @Output() load = new EventEmitter();
+    loadInitialize = false;
     backgroundSrc: string;
+    intersection: IntersectionObserver;
 
     constructor(private el: ElementRef, private renderer: Renderer2) {
     }
@@ -16,7 +18,20 @@ export class BgLoaderDirective implements OnInit {
         if (this.shine) {
             this.renderer.addClass(this.el.nativeElement, 'shine');
         }
-        this.loadImage()
+        this.startObserver()
+    }
+
+    startObserver() {
+        this.intersection = new IntersectionObserver(
+            entries => {
+                if (entries[0].intersectionRatio > 0) {
+                    this.loadImage()
+                    this.intersection.unobserve(this.el.nativeElement)
+                }
+            },
+            {}
+        );
+        this.intersection.observe(this.el.nativeElement);
     }
 
     loadImage() {

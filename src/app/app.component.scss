@@ -53,6 +53,30 @@
     width: 90%;
   }
 }
+.section-social {
+  width:  100vw;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 10%;
+
+  .social {
+    a {
+      margin: 20px;
+    }
+
+    i {
+      border-radius: 50%;
+      font-size: 32px;
+      color: black;
+      padding: 10px;
+    }
+    i:hover {
+      background: rgba(128, 128, 128, 0.204);
+    }
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .notification {
   opacity: 0;
