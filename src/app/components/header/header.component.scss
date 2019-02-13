@@ -21,6 +21,20 @@ a:hover, a:active {
   padding: 12px;
 }
 
+.link-content {
+  opacity: 0;
+  animation: load 0.45s forwards;
+}
+
+.resume-wrap {
+  a {
+    span {
+      opacity: 0;
+      animation: load 0.45s forwards;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .link-content {
     min-width: 175px;

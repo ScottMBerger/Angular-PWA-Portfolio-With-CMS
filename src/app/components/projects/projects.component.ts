@@ -41,4 +41,8 @@ export class ProjectsComponent implements OnInit {
   onDragEnd(event) {
     console.log('drag end', event);
   }
+
+  openLink(url) {
+    window.location.href = url;
+  }
 }

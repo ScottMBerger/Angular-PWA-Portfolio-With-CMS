@@ -230,3 +230,12 @@ h3, i {
   height: 100%;
   overflow: hidden;
 }
+h1 {
+  a {
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;  
+    box-shadow: none !important;
+  }
+}

@@ -2,7 +2,7 @@
   <div class="level-item has-text-left">
     <div class="is-flex link-content">
       <span class="icon">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt" (load)="load()"></i>
       </span>
       <p class="heading is-size-7">{{content.location}}</p>
     </div>
@@ -25,7 +25,7 @@
   </div>
 </nav>
 <div class="resume-wrap">
-  <a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl">Download
-    Resume</a>
+  <a rel="noreferrer" class="button is-pulled-right is-primary" target="_blank" [href]="content.resumeUrl"><span>Download
+      Resume</span></a>
   <br>
 </div>

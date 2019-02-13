@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
   @Input() content;
 
   constructor() { }
-
+  load() {
+    console.log('load')
+  }
   ngOnInit() { }
 }
