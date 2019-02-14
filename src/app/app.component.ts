@@ -90,7 +90,6 @@ export class AppComponent implements OnInit {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     if (!isSafari && res.backgroundImage.webp) {
       this.backgroundSrc = res.backgroundImage.webp;
-
     } else if (isSafari && res.backgroundImage.jp2) {
       this.backgroundSrc = res.backgroundImage.jp2
     } else {
