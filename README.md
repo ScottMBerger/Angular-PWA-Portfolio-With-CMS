@@ -20,7 +20,7 @@ Run `npm run build` ideally you would use pm2 or similar to run the server.js fi
 Configure your server to reverse proxy to the port (3000 by default)
 Make sure to configure your server to forward proxy to your manifest file.  
 -- [Example nginx config file](https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS/blob/master/example-manifest.json)  
--- [Example nginx config file](https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS/blob/master/example-nginx-config)
+-- [Example manifest.json file](https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS/blob/master/example-nginx-config)
 
 ## Live sites using this project
 
