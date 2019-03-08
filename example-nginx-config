@@ -1,0 +1,46 @@
+server {
+    listen 80;
+    server_name www.scottb.app scottb.app;
+    return 301 https://scottb.app$request_uri;
+}
+
+server {
+    listen 443;
+    listen [::]:443 ssl http2;
+    ssl on;
+    gzip on;
+
+    ssl_certificate /etc/letsencrypt/live/scottb.app/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/scottb.app/privkey.pem;
+
+    root /var/www/scottb.app;
+    index index.html;
+
+    server_name *.scottb.app scottb.app;
+
+    if ($host = 'www.scottb.app' ) {
+        rewrite  ^/(.*)$  https://scottb.app/$1  permanent;
+    }
+                
+    location /manifest.json {
+        proxy_pass  https://content.dropboxapi.com/2/files/download;
+        proxy_set_header Authorization "Bearer YOUR-DROPBOX-DEVELOPER-TOKEN-HERE";
+        proxy_set_header Dropbox-API-Arg "{\"path\": \"/manifest.json\"}";
+    }
+
+    location /manifest {
+        proxy_pass  https://content.dropboxapi.com/2;
+        proxy_set_header Authorization "Bearer YOUR-DROPBOX-DEVELOPER-TOKEN-HERE";
+        proxy_set_header Dropbox-API-Arg "{\"path\": \"/manifest.json\"}";
+    }
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+

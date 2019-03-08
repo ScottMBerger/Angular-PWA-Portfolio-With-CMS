@@ -1,0 +1,259 @@
+{
+    "name": "Scott Berger",
+    "short_name": "Scott Berger",
+    "theme_color": "#144c84",
+    "background_color": "#fafafa",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "https://i.imgur.com/evve7zF.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/f6EHPAJ.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/Wvlc1pu.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/sG90tP2.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/eFNYPQj.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/QPmTQNl.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/aF7SNdq.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "https://i.imgur.com/lp9gzaQ.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "title": "Scott Berger",
+    "location": "COLUMBUS OH 43201",
+    "phone": "(614) 441-7883",
+    "email": "CONTACT@SCOTTB.APP",
+    "info1": "App Developer",
+    "info2": "Focusing on hybrid mobile apps and progressive web apps with Ionic and Angular.",
+    "imgurAlbumId": "EUexSIe",
+    "profileImage": {
+        "src": "https://i.imgur.com/4lg8Dbt.jpg",
+        "jp2": "/assets/portfolio2.jp2",
+        "webp": "/assets/portfolio2.webp"
+    },
+    "backgroundImage": {
+        "src": "https://i.imgur.com/CmIWIQS.jpg",
+        "jp2": null,
+        "webp": "/assets/bg2.webp"
+    },
+    "resumeUrl": "https://drive.google.com/open?id=1Dpw7utQ1w3mYd59vhSy3U4gErnJ4Jzo8",
+    "googleDescription": "App developer focusing on hybrid mobile apps and progressive web apps with Ionic and Angular",
+    "keywords": "Angular, Web Dev, Ohio, Columbus, Scott Berger, Ionic, node, node.js, angularjs, cordova, hybrid, mobile, es6, developer, for hir, redux, ngrx, ngxs",
+    "social": [
+        {
+            "url": "https://www.linkedin.com/in/smberger/",
+            "icon": "fab fa-linkedin"
+        },
+        {
+            "url": "https://github.com/ScottMBerger",
+            "icon": "fab fa-github"
+        }
+    ],
+    "showcase": [
+        {
+            "title": "Sleep Orbit",
+            "links": [
+                {
+                    "url": "https://sleeporbit.app",
+                    "icon": "fas fa-external-link-square-alt"
+                },
+                {
+                    "url": "https://play.google.com/store/apps/details?id=net.sleeporbit",
+                    "icon": "fab fa-android"
+                },
+                {
+                    "url": "https://itunes.apple.com/us/app/sleep-orbit-relaxing-3d-sound-white-noise-asmr/id1215043393?ls=1&mt=8",
+                    "icon": "fab fa-apple"
+                }
+            ],
+            "image": {
+                "src": "https://i.imgur.com/bAGI2eq.jpg",
+                "jp2": null,
+                "webp": "/assets/sleepproject.webp"
+            },
+            "description": [
+                "Hybrid mobile app originally made with Ionic 2 beta and has since been upgraded to Ionic 3",
+                "Featured by Apple App Store, 'New Apps We Love'(Global) May 2017",
+                "Featued by Apple App Store, 'App of the Day' (Japan) August 2018",
+                "Featued by Apple App Store, 'App of the Day' (Europe) February 2019",
+                "2+ million downloads"
+            ],
+            "additionalImages": [
+                {
+                    "src": "https://i.imgur.com/KV48wL2.jpg",
+                    "jp2": null,
+                    "webp": null
+                },
+                {
+                    "src": "https://i.imgur.com/B7bJ29n.jpg",
+                    "jp2": null,
+                    "webp": null
+                }
+            ],
+            "files": []
+        },
+        {
+            "title": "Eth.bid",
+            "description": [
+                "Ethereum blockchain game",
+                "Tech stack includes Angular, Ionic, Sails.js, Express, Unity, Web3.js",
+                "Based off the collectible crypto game, CryptoKitties, and utilizes the CryptoKitties API and its contract that is on the Ethereum blockchain",
+                "Each CryptoKitty DNA is converted into a unique ship with a dynamically generated SVG and also translated into the full 3D game. Different colors, models, sizes, and weapons are uniquely determined by the kitties genes."
+            ],
+            "links": [
+                {
+                    "url": "https://eth.bid",
+                    "icon": "fas fa-external-link-square-alt"
+                },
+                {
+                    "url": "https://github.com/ScottMBerger/Blockchain-Ionic-Unity-Game",
+                    "icon": "fab fa-github"
+                }
+            ],
+            "image": {
+                "src": "https://i.imgur.com/59UnT1H.jpg",
+                "jp2": null,
+                "webp": "/assets/ships.webp"
+            },
+            "additionalImages": [
+                {
+                    "src": "https://i.imgur.com/YItXQMu.png",
+                    "jp2": null,
+                    "webp": null
+                },
+                {
+                    "src": "https://i.imgur.com/Zd3EdcK.png",
+                    "jp2": null,
+                    "webp": null
+                }
+            ]
+        },
+        {
+            "title": "Portfolio",
+            "description": [
+                "Fully responsive Angular PWA with skeleton loaders and dynamic opinionless CMS content",
+                "Nearly perfect Lighthouse score",
+                "Designed to create an easy to configure and customize portfolio site for anyone to use. None of the source files need to be changed to configure a unique presentation for the site.",
+                "Two sites can be serving the same project folder and look completely different by changing the nginx to direct to a different manifest.json file. Along with this, the project is already using the manifest.json for the PWA configuration enabling it takes no additional overhead."
+            ],
+            "links": [
+                {
+                    "url": "https://scottb.app",
+                    "icon": "fas fa-external-link-square-alt"
+                },
+                {
+                    "url": "https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS",
+                    "icon": "fab fa-github"
+                }
+            ],
+            "image": {
+                "src": "https://i.imgur.com/pm8V3PQ.jpg",
+                "jp2": null,
+                "webp": "/assets/cmsportfolio.webp"
+            },
+            "additionalImages": [
+                {
+                    "src": "https://i.imgur.com/pgj1hvU.png",
+                    "jp2": null,
+                    "webp": null
+                },
+                {
+                    "src": "https://i.imgur.com/tWfWlne.png",
+                    "jp2": null,
+                    "webp": null
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Sleep Orbit App",
+            "description": "Description 1",
+            "link": "/assets/sleep.webp",
+            "files": [
+                {
+                    "name": "file2.docx",
+                    "url": "https://i.imgur.com/k1jC1d7.jpg"
+                },
+                {
+                    "name": "autocadfile.cad",
+                    "url": "https://www.dropbox.com/s/gpu8be94b336vkx/Scott-Berger-Resume.pdf?dl=1"
+                }
+            ]
+        },
+        {
+            "title": "Sleep Orbit App",
+            "description": "Description 1",
+            "link": "/assets/sleep.webp",
+            "files": [
+                {
+                    "name": "file2.docx",
+                    "url": "https://i.imgur.com/k1jC1d7.jpg"
+                },
+                {
+                    "name": "autocadfile.cad",
+                    "url": "https://www.dropbox.com/s/gpu8be94b336vkx/Scott-Berger-Resume.pdf?dl=1"
+                }
+            ]
+        },
+        {
+            "title": "Sleep Orbit App",
+            "description": "Description 1",
+            "link": "/assets/sleep.webp",
+            "files": [
+                {
+                    "name": "file2.docx",
+                    "url": "https://i.imgur.com/k1jC1d7.jpg"
+                },
+                {
+                    "name": "autocadfile.cad",
+                    "url": "https://www.dropbox.com/s/gpu8be94b336vkx/Scott-Berger-Resume.pdf?dl=1"
+                }
+            ]
+        },
+        {
+            "title": "Eth.bid",
+            "description": "Description 2",
+            "link": "/assets/ships.webp",
+            "files": [
+                {
+                    "name": "file2.docx",
+                    "url": "https://www.dropbox.com/s/gpu8be94b336vkx/Scott-Berger-Resume.pdf?dl=1"
+                },
+                {
+                    "name": "autocadfile.cad",
+                    "url": "https://www.dropbox.com/s/gpu8be94b336vkx/Scott-Berger-Resume.pdf?dl=1"
+                }
+            ]
+        }
+    ]
+}

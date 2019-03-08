@@ -19,8 +19,7 @@
   <div class="modal-content">
     <h1 *ngIf="modal.title">{{modal.title}}
       <a class="icon" *ngFor="let link of modal.links" [attr.aria-label]="link.url" [href]="link.url" (click)="openLink(link.url)">
-        <i [class]="
-                    link.icon" aria-hidden="true"></i>
+        <i [class]="link.icon" aria-hidden="true"></i>
       </a>
     </h1>
     <div class="columns">

@@ -19,9 +19,10 @@ Change the proxy.config.json to load the manifest file of your choice.
 Run `npm run build` ideally you would use pm2 or similar to run the server.js file and to keep a live watch of the project.
 Configure your server to reverse proxy to the port (3000 by default)
 Make sure to configure your server to forward proxy to your manifest file.
--- [Example nginx config file](https://github.com)
+-- [Example nginx config file](https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS/blob/master/example-manifest.json)
+-- [Example nginx config file](https://github.com/ScottMBerger/Angular-PWA-Portfolio-With-CMS/blob/master/example-nginx-config)
 
 ## Live sites using this project
 
-[https://scottb.app](https://scottb.app)
+[https://scottb.app](https://scottb.app)  
 [https://tessamberger.com](https://tessamberger.com)
